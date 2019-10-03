@@ -1,0 +1,79 @@
+<head>
+    <title>Chpohub</title>
+</head>
+<style>
+    body {
+        padding-top: 10%;
+        text-align: center;
+        font-family: monaco, monospace;
+        background: url(https://wallpapers.ae/wp-content/uploads/2014/10/Free-Dark-Black-Pattern-Image-For-Window-9.jpg) 50%;
+        background-size: cover;
+    }
+    
+    h1,
+    h2 {
+        display: inline-block;
+        color: white;
+    }
+    
+    h1 {
+        font-size: 56px
+    }
+    
+    h2 {
+        font-size: 48px;
+    }
+    
+    h3 {
+        display: inline-block;
+        color: black;
+        background: white;
+        font-size: 24px;
+    }
+    
+    .button {
+        display: inline-block;
+        color: black;
+        background: #FFA500;
+        font-size: 36px;
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    span {
+        color: black;
+        background: #FFA500;
+    }
+</style>
+
+<link rel="stylesheet" type="text/css" href="./button.css" media="screen" />
+
+<h1>Welcome to <span>chpohub</span></h1>
+<br>
+<h2>A pussy picture collection</h2>
+<br>
+<h3>Please enter your year of birth:
+<select id = "year"> 
+</select></h3>
+<br>
+<div class="button", id="proceed">Proceed to the website</div>
+
+<script>
+var yr = new Date().getFullYear();
+var years = [];
+for (var i = yr; i >= yr-120; i--) {
+  years.push("<option>" + i.toString() + "</option>")
+}
+document.getElementById("year").innerHTML = years.join("");
+
+document.getElementById("proceed").onclick = function(){
+	var e = document.getElementById("year");
+	var strUser = e.options[e.selectedIndex].value;
+	if (yr-strUser>=18){
+		window.location.href = "./gallery.html";
+	}
+	else{
+		alert("The content in this website is inappropriate for people under 18. Come back when you're 18 :)")
+	}
+}
+</script>
