@@ -35,6 +35,7 @@ document.getElementById("proceed").onclick = function(){
 	var b = document.getElementById("password");
 	var log = a.options[a.selectedIndex].value;
 	var pas = b.options[b.selectedIndex].value;
+	alert(log);
 	if ((log!="") && (pas!="")){
 		window.location.href = "./gallery.html";
 	}
