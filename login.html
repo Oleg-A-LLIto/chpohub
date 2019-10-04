@@ -36,11 +36,11 @@ document.getElementById("proceed").onclick = function(){
 	var pas = b.value;
 	alert(log);
 	alert(pas);
-	if ((log!=NULL) && (pas!=NULL)){
-		window.location.href = "./gallery.html";
+	if ((log==='') || (pas==='')){
+		alert("Please enter your login and password to sign in!");
 	}
 	else{
-		alert("Please enter your login and password to sign in!")
+		window.location.href = "./gallery.html";
 	}
 }
 </script>
