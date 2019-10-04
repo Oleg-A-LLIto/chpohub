@@ -16,40 +16,55 @@
 <br>
 <h2>Sign in now!</h2>
 <br>
-	<table class = "center";>
-		<tr>
-			<td style="text-align: right;"> <h3>Login:</h3> </td>
-			<td> <input id="login"/></td>
-		</tr>
-		<tr>
-			<td style="text-align: right;"> <h3>Password:</h3> </td>
-			<td> <input id="password"/></td>
-		</tr>
-	</table>
-<div>
-  <input type="checkbox" id="rem" name="rem"
-         checked>
-  <label for="scales">Remember me.</label>
-</div>
+<table class="center" ;>
+    <tr>
+        <td style="text-align: right;">
+            <h3>Login:</h3> </td>
+        <td>
+            <input id="login" />
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align: right;">
+            <h3>Password:</h3> </td>
+        <td>
+            <input id="password" />
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align: right;">
+            <h3>Password:</h3> </td>
+        <td>
+            <div>
+                <input type="checkbox" id="rem" name="rem" checked>
+                <label for="scales">Remember me.</label>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align: right;">
+            <h3>Password:</h3> </td>
+        <td>
+            <div>
+                <input type="checkbox" id="keep" name="keep">
+                <label for="horns">Keep me signed in.</label>
+            </div>
+        </td>
+    </tr>
+</table>
 
-<div>
-  <input type="checkbox" id="keep" name="keep">
-  <label for="horns">Keep me signed in.</label>
-</div>
-
-<div class="button", id="proceed">sign in</div>
+<div class="button" , id="proceed">sign in</div>
 
 <script>
-document.getElementById("proceed").onclick = function(){
-	var a = document.getElementById("login");
-	var b = document.getElementById("password");
-	var log = a.value;
-	var pas = b.value;
-	if ((log==='') || (pas==='')){
-		alert("Please enter your login and password to sign in!");
-	}
-	else{
-		window.location.href = "./gallery.html";
-	}
-}
+    document.getElementById("proceed").onclick = function() {
+        var a = document.getElementById("login");
+        var b = document.getElementById("password");
+        var log = a.value;
+        var pas = b.value;
+        if ((log === '') || (pas === '')) {
+            alert("Please enter your login and password to sign in!");
+        } else {
+            window.location.href = "./gallery.html";
+        }
+    }
 </script>
