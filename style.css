@@ -1,0 +1,54 @@
+    h1,
+    h2 {
+        display: inline-block;
+        color: white;
+    }
+    
+    h1 {
+        font-size: 62px
+    }
+    
+    h2 {
+        font-size: 48px;
+    }
+    
+    h3 {
+        display: inline-block;
+        color: black;
+        background: white;
+        font-size: 22px;
+    }
+    
+    .button {
+        display: inline-block;
+        color: black;
+        background: #FFA500;
+        font-size: 36px;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    table.center {
+        display: inline-block;
+        color: #FFA500;
+        background: #black;
+        font-size: 36px;
+        margin: 20px;
+        padding: 20px;
+	margin-left:auto; 
+    	margin-right:auto;
+    }
+    
+    span {
+        color: black;
+        background: #FFA500;
+    }
+
+    h1,
+    h2,
+    h3,
+    .button,
+    span {
+        font-family: Abel;
+	line-height: 75%;
+    }
