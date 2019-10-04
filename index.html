@@ -3,10 +3,27 @@
 </head>
 <style>
     body {
-        padding-top: 10%;
+        padding-top: 5%;
         text-align: center;
-        background: url(https://wallpapers.ae/wp-content/uploads/2014/10/Free-Dark-Black-Pattern-Image-For-Window-9.jpg) 50%;
+		background: url(./background.jpg) 100%;
         background-size: cover;
+    }
+    
+    #maket {
+        width: 80%;
+		padding-left: 20%;
+        /* Ширина всей таблицы в процентах */
+        text-align: center;
+    }
+    
+    #maket TD {
+        vertical-align: top;
+        /* Вертикальное выравнивание в ячейках */
+    }
+    
+    TD#leftcol {
+        width: 50%;
+        /* Ширина левой колонки в пикселах */
     }
 </style>
 
@@ -16,35 +33,89 @@
 <br>
 <h2>A pussy picture collection</h2>
 <br>
-<h3>Please enter your year of birth:
+
+<table cellspacing="0" cellpadding="0" id="maket">
+    <tr>
+        <td id="leftcol" bgcolor="#020202";>
+            <br>
+            <h2>A member? Sign in now!</h2>
+            <br>
+            <table>
+                <tr vertical-align=center;>
+                    <td style="text-align: right;"><h3>Login:</h3></td>
+                    <td><input id="login"/></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <input type="checkbox" id="rem" name="rem" checked>
+                            <label for="scales">
+                                <h3>Remember me.</h3></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <input type="checkbox" id="keep" name="keep">
+                            <label for="horns">
+                                <h3>Keep me signed in.</h3></label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td bgcolor="#020202";>
+			<br>
+            <h2>Continue as a guest</h2>
+            <br>
+            <h3>Please enter your year of birth:
 <select id = "year"> 
 </select></h3>
-<br>
-		<div>
-                	<input type="radio" id="rem" name="rem" checked>
-                	<label for="scales"><h3>Я встал</h3></label>
-		</div>
-		<div>
-                	<input type="radio" id="fall" name="fall" checked>
-                	<label for="scales"><h3>Я упал</h3></label>
-		</div>
-<div class="button", id="proceed">Proceed to the website</div>
-<script>
-var yr = new Date().getFullYear();
-var years = [];
-for (var i = yr; i >= yr-120; i--) {
-  years.push("<option>" + i.toString() + "</option>")
-}
-document.getElementById("year").innerHTML = years.join("");
+            <br>
+            <div id="status">
+			<form id="status">
+			<input type="radio" id="st" name="status" value="standing" checked="checked"> <h3>Male</h3>
+			<input type="radio" id="fl" name="status" value="fallen"> <h3>Female</h3>
+			<form>
+			</div>
+        </td>
+    </tr>
+	<tr>
+		<td bgcolor="#020202";>
+			<div class="button" , id="signin">sign in</div>
+		</td>	
+		<td bgcolor="#020202";>
+			<div class="button" , id="proceed">Proceed to the website</div>
+		</td>
+	</tr>
+    <script>
+        var yr = new Date().getFullYear();
+        var years = [];
+        for (var i = yr; i >= yr - 120; i--) {
+            years.push("<option>" + i.toString() + "</option>")
+        }
+        document.getElementById("year").innerHTML = years.join("");
 
-document.getElementById("proceed").onclick = function(){
-	var e = document.getElementById("year");
-	var strUser = e.options[e.selectedIndex].value;
-	if (yr-strUser>=18){
-		window.location.href = "./gallery.html";
-	}
-	else{
-		alert("The content in this website is inappropriate for people under 18. Come back when you're 18 :)")
-	}
-}
-</script>
+        document.getElementById("proceed").onclick = function() {
+            var e = document.getElementById("year");
+            var strUser = e.options[e.selectedIndex].value;
+            if (yr - strUser >= 18) {
+                window.location.href = "./gallery.html";
+            } else {
+                alert("The content in this website is inappropriate for people under 18. Come back when you're 18 :)")
+            }
+        }
+    </script>
+
+    <script>
+        document.getElementById("signin").onclick = function() {
+            var a = document.getElementById("login");
+            var log = a.value;
+            if (log === '') {
+                alert("Please enter your nickname to sign in!");
+            } else {
+                window.location.href = "./gallery.html";
+            }
+        }
+    </script>
