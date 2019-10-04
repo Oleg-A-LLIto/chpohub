@@ -33,8 +33,8 @@ document.getElementById("proceed").onclick = function(){
 	alert("Checking");
 	var a = document.getElementById("login");
 	var b = document.getElementById("password");
-	var log = a.options[a.selectedIndex].value;
-	var pas = b.options[b.selectedIndex].value;
+	var log = a.value;
+	var pas = b.value;
 	alert(log);
 	if ((log!="") && (pas!="")){
 		window.location.href = "./gallery.html";
