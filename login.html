@@ -19,17 +19,26 @@
 	<table class = "center";>
 		<tr>
 			<td style="text-align: right;"> <h3>Login:</h3> </td>
-			<td> <input/></td>
+			<td> <input id="login"/></td>
 		</tr>
 		<tr>
 			<td style="text-align: right;"> <h3>Password:</h3> </td>
-			<td> <input/></td>
+			<td> <input id="password"/></td>
 		</tr>
 	</table>
 <div class="button", id="proceed">sign in</div>
 
 <script>
 document.getElementById("proceed").onclick = function(){
+	var a = document.getElementById("login");
+	var b = document.getElementById("password");
+	var log = a.options[a.selectedIndex].value;
+	var pas = b.options[b.selectedIndex].value;
+	if (log!=NULL && pas!=NULL){
 		window.location.href = "./gallery.html";
+	}
+	else{
+		alert("Please enter your login and password to sign in!")
+	}
 }
 </script>
